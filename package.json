@@ -4,5 +4,9 @@
   "description": "A NextJS and NestJS GraphQL starter pack",
   "author": "Tom Nagle",
   "private": true,
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "heroku-postbuild": "cd server && nest build",
+    "start": "cd server && node dist/main"
+  }
 }
