@@ -6,7 +6,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "heroku-postbuild": "cd server && nest build",
+    "heroku-postbuild": "cd server && npm run build",
     "start": "cd server && node dist/main"
   }
 }
