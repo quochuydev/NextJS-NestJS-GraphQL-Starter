@@ -2,6 +2,7 @@ import { styled } from 'bumbag';
 import React, { useState, useMemo } from 'react';
 import TinderCard from 'react-tinder-card';
 import Photo from './Photo';
+import styles from './swipe.module.css';
 
 const Photos = styled.div`
   display: flex;
@@ -83,7 +84,7 @@ function Advanced() {
       {characters.map((character, index) => (
         <TinderCard
           ref={childRefs[index]}
-          className="swipe"
+          className={styles.swipe}
           key={character.name}
           onSwipe={dir => swiped(dir, character.name)}
           onCardLeftScreen={() => outOfFrame(character.name)}
