@@ -11,6 +11,7 @@ import jwt from 'jsonwebtoken';
 import parseCookie from 'helpers/parseCookie';
 import theme from '../constants/theme';
 import withApollo from '../lib/withApollo';
+import './style.css';
 
 NProgress.configure({ showSpinner: false });
 Router.events.on('routeChangeStart', () => {

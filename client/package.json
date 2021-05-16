@@ -47,6 +47,7 @@
     "react-hook-form": "^6.13.0",
     "react-i18next": "^11.8.5",
     "react-icons": "^4.2.0",
+    "react-tinder-card": "git+https://github.com/quochuydev/react-tinder-card.git",
     "styled-components": "^5.2.1",
     "subscriptions-transport-ws": "^0.9.18",
     "yup": "^0.32.8"

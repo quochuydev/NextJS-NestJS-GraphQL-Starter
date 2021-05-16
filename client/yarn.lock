@@ -7271,6 +7271,11 @@ p-map@^2.0.0:
   resolved "https://registry.yarnpkg.com/p-map/-/p-map-2.1.0.tgz#310928feef9c9ecc65b68b17693018a665cea175"
   integrity sha512-y3b8Kpd8OAN444hxfBbFfj1FY/RjtTd8tzYwhUqNYXx0fXx2iX4maP4Qr6qhIKbQXI02wTLAda4fYUbDagTUFw==
 
+p-sleep@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/p-sleep/-/p-sleep-1.1.0.tgz#a6c9333059b5103c3c0e46bcbba95a1f7969095b"
+  integrity sha512-bwP3GKZirBUYMtiUuBrheLUQdRXVeE/pmHOaLpNJzNfAD4b5AjDn6l823brXcQFade4G/g7GMNQ3KV86E8EaEw==
+
 p-try@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
@@ -7881,6 +7886,12 @@ react-refresh@0.8.3:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
+
+"react-tinder-card@git+https://github.com/quochuydev/react-tinder-card.git":
+  version "1.4.0"
+  resolved "git+https://github.com/quochuydev/react-tinder-card.git#1ad6c0692a9692bb0f9dc68ce74c44bf9c4fb3e8"
+  dependencies:
+    p-sleep "^1.1.0"
 
 react@^17.0.1:
   version "17.0.1"
