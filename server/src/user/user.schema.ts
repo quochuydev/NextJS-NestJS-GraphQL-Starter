@@ -88,10 +88,11 @@ UserSchema.plugin(permalink, {
  * Password hash middleware.
  */
 UserSchema.methods.comparePassword = function(
+  password: string,
   candidatePassword: string,
 ): Promise<boolean> {
   return new Promise((resolve, reject) => {
-    bcrypt.compare(candidatePassword, this.password, (err, isMatch) => {
+    bcrypt.compare(candidatePassword, password, (err, isMatch) => {
       if (err) {
         return reject(false);
       }
@@ -104,11 +105,11 @@ UserSchema.methods.comparePassword = function(
 };
 
 UserSchema.methods.compareEmailVerification = function(
+  tokens: any,
   emailVerification: string,
 ): boolean {
   return (
-    String(this.tokens.emailVerification).trim() ===
-    String(emailVerification).trim()
+    String(tokens.emailVerification).trim() === String(emailVerification).trim()
   );
 };
 
@@ -150,7 +151,7 @@ export class User extends Document {
 }
 
 export interface UserModel extends User {
-  comparePassword(candidatePassword: string): boolean;
-  compareEmailVerification(emailVerification: string): boolean;
+  comparePassword(password: string, candidatePassword: string): boolean;
+  compareEmailVerification(tokens: any, emailVerification: string): boolean;
   generateJWT(): string;
 }
