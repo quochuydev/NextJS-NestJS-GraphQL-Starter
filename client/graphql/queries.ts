@@ -36,6 +36,7 @@ export const ME_QUERY = gql`
       permalink
       email
       avatar
+      bio
     }
   }
 `;

@@ -31,7 +31,7 @@ const PhotoBio = styled.div`
 `;
 
 const Photo = styled.div`
-  height: 684px;
+  height: 80vh;
   border-radius: 10px;
   display: flex;
   align-items: flex-end;

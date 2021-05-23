@@ -195,7 +195,7 @@ export type MeQuery = (
   { readonly __typename?: 'Query' }
   & { readonly me?: Maybe<(
     { readonly __typename?: 'User' }
-    & Pick<User, '_id' | 'name' | 'role' | 'permalink' | 'email' | 'avatar'>
+    & Pick<User, '_id' | 'name' | 'role' | 'permalink' | 'email' | 'avatar' | 'bio'>
   )> }
 );
 
@@ -457,6 +457,7 @@ export const MeDocument = gql`
     permalink
     email
     avatar
+    bio
   }
 }
     `;

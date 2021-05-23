@@ -14,12 +14,13 @@ import Swiped from './Swiped';
 import TinderCard from 'react-tinder-card';
 import Photo from './Photo';
 import styles from './swipe.module.css';
+import Link from 'next/link';
 
 const Navbar = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-around;
-  padding: 10px 0;
+  padding: 20px 0;
 
   svg {
     fill: #dadfe6;
@@ -85,7 +86,7 @@ const Photos = styled.div`
   flexdirection: column;
   alignitems: center;
   position: relative;
-  height: 680px;
+  height: 82vh;
   textalign: center;
   margin: 0 auto;
 
@@ -158,9 +159,15 @@ const Home = () => {
   return (
     <div>
       <Navbar>
-        <AiFillFire />
-        <AiFillWechat />
-        <FaUserAlt />
+        <Link as="/discovery" href="/discovery" passHref>
+          <AiFillFire />
+        </Link>
+        <Link as="/chat" href="/chat" passHref>
+          <AiFillWechat />
+        </Link>
+        <Link as="/profile" href="/profile" passHref>
+          <FaUserAlt />
+        </Link>
       </Navbar>
       {/* <Swiped /> */}
       <Photos>
