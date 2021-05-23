@@ -65,6 +65,7 @@ const Photos = styled.div`
   flexdirection: column;
   alignitems: center;
   position: relative;
+  width: 100%;
   height: 78vh;
   textalign: center;
   margin: 0 auto;
@@ -72,6 +73,26 @@ const Photos = styled.div`
   @media (min-width: 1025px) {
     width: 400px;
   }
+`;
+
+const Button = styled.button`
+  display: inline-block;
+  position: relative;
+  padding: 12px 36px;
+  margin: 10px 0;
+  color: #fff;
+  text-decoration: none;
+  border: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #755bea, #ff72c0);
+  cursor: pointer;
+`;
+
+const Alert = styled.div`
+  width: 100%;
+  text-align: center;
 `;
 
 const db = [
@@ -138,6 +159,18 @@ const Home = () => {
     <div>
       {/* <Swiped /> */}
       <Photos>
+        <Alert>
+          <h3>No more</h3>
+          <p>Please setting to load more items.</p>
+          <Button
+            onClick={() => {
+              console.log('confirm');
+            }}
+          >
+            Refresh
+          </Button>
+        </Alert>
+
         {characters.map((character, index) => (
           <TinderCard
             ref={childRefs[index]}
