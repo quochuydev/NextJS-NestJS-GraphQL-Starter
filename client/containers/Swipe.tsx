@@ -65,7 +65,7 @@ const Photos = styled.div`
   flexdirection: column;
   alignitems: center;
   position: relative;
-  height: 82vh;
+  height: 78vh;
   textalign: center;
   margin: 0 auto;
 

@@ -76,6 +76,7 @@ function SettingsPage() {
       description={t('page.profile.description')}
       // breadcrumbs={[{ label: t('page.profile.title') }]}
       requiresUser
+      showFooter={false}
     >
       <Container breakpoint="tablet">
         <form onSubmit={handleSubmit(onSubmit)}>

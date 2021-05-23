@@ -13,6 +13,8 @@ const Navbar = styled.div`
   padding: 20px 0;
 
   svg {
+    display: block;
+    flex: 1;
     fill: #dadfe6;
     font-size: 1.5rem;
   }
