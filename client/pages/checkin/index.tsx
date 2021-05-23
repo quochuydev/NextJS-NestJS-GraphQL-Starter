@@ -32,7 +32,7 @@ function Checkin() {
             console.log('check');
           }}
         >
-          <span>Check-In</span>
+          <span>Check-In Now</span>
         </CheckinButton>
         <p style={{ color: 'green' }}>
           <BsCheckAll />
