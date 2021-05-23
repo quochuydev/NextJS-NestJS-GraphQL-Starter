@@ -1684,10 +1684,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@hookform/resolvers@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-1.3.1.tgz#129533db26f7d25d10145fe95e17367c9127e042"
-  integrity sha512-RrTZHRVSL1UvFWf8/HxGXzfkbYtgdauVBo4gCZ61euQZU3hk5jbWIk05/vQmEctUeUggxDcnUnVqd9yAf5z0zg==
+"@hookform/resolvers@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-1.3.0.tgz#b2b0ff3b4b6b104e0df1954e58098e0a9cb6195d"
+  integrity sha512-NF+KJYDiFjnGAqhM92vG5kFJFCZFFjO5VxcByf06o6FrG7BEta5NDBhqVsIAMSfMNsn1kWfSKX1TkDT21xq9Hg==
 
 "@iarna/toml@^2.2.5":
   version "2.2.5"
@@ -7884,7 +7884,7 @@ react-refresh@0.8.3:
 
 "react-tinder-card@git+https://github.com/quochuydev/react-tinder-card.git":
   version "1.4.0"
-  resolved "git+https://github.com/quochuydev/react-tinder-card.git#1ad6c0692a9692bb0f9dc68ce74c44bf9c4fb3e8"
+  resolved "git+https://github.com/quochuydev/react-tinder-card.git#47e2474edf320c19b1bd881e60f0eb374b6d7a97"
   dependencies:
     p-sleep "^1.1.0"
 

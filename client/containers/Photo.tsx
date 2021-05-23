@@ -1,16 +1,6 @@
 import * as React from 'react';
 import { styled } from 'bumbag';
 
-const Photo = styled.div`
-  height: 684px;
-  background: url('./girl.jpg') center center/cover;
-  border-radius: 10px;
-  display: flex;
-  align-items: flex-end;
-  color: #eee;
-  box-shadow: 0 2px 10px 0 rgba(136, 136, 136, 0.77);
-`;
-
 const PhotoText = styled.div`
   padding: 15px;
   background: rgb(2, 0, 36);
@@ -40,19 +30,26 @@ const PhotoBio = styled.div`
   font-weight: 400;
 `;
 
-const Home = () => {
+const Photo = styled.div`
+  height: 684px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  color: #eee;
+  box-shadow: 0 2px 10px 0 rgba(136, 136, 136, 0.77);
+`;
+
+const Home = (props: any) => {
+  const { item } = props;
+
   return (
-    <Photo>
+    <Photo style={{ background: `url('${item.url}') center center/cover` }}>
       <PhotoText>
         <PhotoNameAge>
-          <h2>Lorem</h2>
-          <h2>22</h2>
+          <h2>{item.name}</h2>
+          <h2>{item.age}</h2>
         </PhotoNameAge>
-        <PhotoBio>
-          Lorem LoremLorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
-          Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
-          Lorem Lorem
-        </PhotoBio>
+        <PhotoBio>{item.description}</PhotoBio>
       </PhotoText>
     </Photo>
   );
