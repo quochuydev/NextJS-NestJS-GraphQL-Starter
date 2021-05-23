@@ -71,7 +71,6 @@ const Photos = styled.div`
 
   @media (min-width: 1025px) {
     width: 400px;
-    height: 684px;
   }
 `;
 

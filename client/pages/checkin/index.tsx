@@ -40,7 +40,18 @@ function Checkin() {
         </p>
         <p>Date: {new Date().toISOString()}</p>
       </div>
-      <Calendar onChange={onChange} value={value} />
+      <Calendar
+        onChange={onChange}
+        value={value}
+        tileContent={({ date, view }) => {
+          return (
+            <>
+              {/* {String(date)} <BsCheckAll style={{ color: 'green' }} /> */}
+              <BsCheckAll style={{ color: 'green' }} />
+            </>
+          );
+        }}
+      />
     </App>
   );
 }
