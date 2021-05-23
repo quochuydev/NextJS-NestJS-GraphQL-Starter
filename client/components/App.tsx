@@ -4,17 +4,16 @@ import { NextSeo, BreadcrumbJsonLd } from 'next-seo';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
-import { PageWithHeader, Breadcrumb, Box, useTheme, usePage } from 'bumbag';
+import { Breadcrumb, Box, useTheme, usePage } from 'bumbag';
 import { useMeQuery } from 'generated';
 import { CLIENT_DOMAIN } from 'config/env';
 import manifest from 'public/manifest.json';
 import Login from 'components/Login';
-import Navigation from 'components/Navigation';
 import Footer from 'components/Footer';
 import useTranslation from 'locales/useTranslation';
 import NavBar from 'containers/NavBar';
 
-const pagePadding = 'major-2';
+const pagePadding = 'major-3';
 
 const RenderBreadcrumbs = ({ breadcrumbs, asPath }) => {
   if (!breadcrumbs.length) {
