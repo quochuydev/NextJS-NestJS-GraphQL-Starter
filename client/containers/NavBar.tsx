@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useMemo, useState } from 'react';
 import * as _ from 'lodash';
-import { AiFillFire, AiFillWechat, AiFillCalendar } from 'react-icons/ai';
+import { AiFillFire, AiFillCalendar } from 'react-icons/ai';
 import { FaUserAlt } from 'react-icons/fa';
 import { styled } from 'bumbag';
 import Link from 'next/link';

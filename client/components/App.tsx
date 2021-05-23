@@ -77,7 +77,7 @@ export interface Profile {
 const App = ({
   children,
   title,
-  description,
+  description = '',
   showFooter = true,
   showNav = true,
   breadcrumbs = [],
@@ -86,7 +86,7 @@ const App = ({
 }: {
   children: any;
   title?: string;
-  description: string;
+  description?: string;
   showFooter?: boolean;
   showNav?: boolean;
   breadcrumbs?: BreadcrumbItem[];
