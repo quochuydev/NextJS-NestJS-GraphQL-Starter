@@ -19,8 +19,10 @@ import {
 
 const withApollo = nextWithApollo(
   ({ initialState, headers, ...rest }) => {
+    console.log(IS_SERVER, SERVER_API_ENDPOINT, BROWSER_API_ENDPOINT);
     const httpLink = new HttpLink({
-      uri: IS_SERVER ? SERVER_API_ENDPOINT : BROWSER_API_ENDPOINT,
+      // uri: IS_SERVER ? SERVER_API_ENDPOINT : BROWSER_API_ENDPOINT,
+      uri: SERVER_API_ENDPOINT,
       headers: {
         ...headers
       },
@@ -50,6 +52,7 @@ const withApollo = nextWithApollo(
 export const withApolloWithSubscriptions = nextWithApollo(
   ({ initialState, headers, ...rest }) => {
     const clientId = nanoid();
+    console.log(WEBSOCKET_API_URL);
 
     const wsLink = !IS_SERVER
       ? new WebSocketLink({
@@ -64,7 +67,8 @@ export const withApolloWithSubscriptions = nextWithApollo(
       : null;
 
     const httpLink = new HttpLink({
-      uri: IS_SERVER ? SERVER_API_ENDPOINT : BROWSER_API_ENDPOINT,
+      // uri: IS_SERVER ? SERVER_API_ENDPOINT : BROWSER_API_ENDPOINT,
+      uri: SERVER_API_ENDPOINT,
       headers: {
         ...headers
       },

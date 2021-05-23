@@ -98,15 +98,11 @@ const Photos = styled.div`
 const db = [
   {
     name: 'Richard Hendricks',
-    url: './girl.jpg'
-  },
-  {
-    name: 'Erlich Bachman',
-    url: './girl.jpg'
-  },
-  {
-    name: 'Monica Hall',
-    url: './girl.jpg'
+    url: './girl.jpg',
+    age: 22,
+    description: `Lorem LoremLorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
+      Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
+      Lorem Lorem`
   },
   {
     name: 'Jared Dunn',

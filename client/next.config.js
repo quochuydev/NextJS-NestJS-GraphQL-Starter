@@ -163,13 +163,15 @@ config.publicRuntimeConfig = {
   BROWSER_API_ENDPOINT: process.env.BROWSER_API_ENDPOINT,
   GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
   CLIENT_DOMAIN: process.env.CLIENT_DOMAIN || `http://localhost:3000`,
-  REDDIT_CLIENT_ID: process.env.REDDIT_CLIENT_ID
-};
-
-config.serverRuntimeConfig = {
+  REDDIT_CLIENT_ID: process.env.REDDIT_CLIENT_ID,
   SERVER_API_ENDPOINT:
     process.env.SERVER_API_ENDPOINT || 'http://localhost:5000/graphql'
 };
+
+// config.serverRuntimeConfig = {
+//   SERVER_API_ENDPOINT:
+//     process.env.SERVER_API_ENDPOINT || 'http://localhost:5000/graphql'
+// };
 
 config.assetPrefix =
   process.env.NODE_ENV === 'production' ? 'https://static.example.com' : '';

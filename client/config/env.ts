@@ -14,7 +14,8 @@ export const {
   GITHUB_CLIENT_ID,
   WEBSOCKET_API_URL,
   REDDIT_CLIENT_ID,
-  TWITTER_HANDLE
+  TWITTER_HANDLE,
+  SERVER_API_ENDPOINT
 } = publicRuntimeConfig;
 
-export const { SERVER_API_ENDPOINT } = serverRuntimeConfig;
+// export const { SERVER_API_ENDPOINT } = serverRuntimeConfig;
