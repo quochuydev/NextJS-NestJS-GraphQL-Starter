@@ -35,7 +35,7 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
     name: 'token'
   });
 
-  initSentry({ user: get(jwt.decode(token), 'user', null) });
+  // initSentry({ user: get(jwt.decode(token), 'user', null) });
 
   const initialProps = Component.getInitialProps
     ? await Component.getInitialProps(ctx)

@@ -37,17 +37,7 @@ const CookiePolicyPage = () => {
           certain elements of the sites functionality.
         </p>
 
-        <p>
-          For more general information on cookies, please read{' '}
-          <Link
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            href="https://www.cookieconsent.com/what-are-cookies/"
-          >
-            "What Are Cookies"
-          </Link>
-          .
-        </p>
+        <p>For more general information on cookies, please read .</p>
 
         <p>
           <strong>How We Use Cookies</strong>

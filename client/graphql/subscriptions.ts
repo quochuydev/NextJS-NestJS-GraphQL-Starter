@@ -8,3 +8,12 @@ export const NEW_MESSAGE_SUBSCRIPTION = gql`
     }
   }
 `;
+
+export const newMessage2 = gql`
+  subscription newMessage2 {
+    newMessage2 {
+      sent
+      body
+    }
+  }
+`;

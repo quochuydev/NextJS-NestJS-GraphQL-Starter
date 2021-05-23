@@ -60,5 +60,6 @@ input UpdateUserInput {
 }
 
 type Subscription {
+  newMessage2: Message!
   newMessage: Message!
 }

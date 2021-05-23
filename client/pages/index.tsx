@@ -10,6 +10,7 @@ import Swipe from 'containers/Swipe';
 const Home = () => {
   const { data } = useMeQuery();
   const me = get(data, 'me', null);
+  console.log({ me });
 
   const position = async () => {
     await navigator.geolocation.getCurrentPosition(
@@ -43,10 +44,7 @@ const Home = () => {
   }, []);
 
   return (
-    <App description="">
-      {me ? `Welcome ${me.name}` : <LoggedOutHome />}
-      <Swipe />
-    </App>
+    <App description="">{me ? `Welcome ${me.name}` : <LoggedOutHome />}</App>
   );
 };
 

@@ -44,21 +44,19 @@ const GitHubLogin = ({
   }
 
   return (
-    <>
-      <Tooltip content="Login or register with your Reddit account">
-        <Button
-          width="100%"
-          variant="ghost"
-          onClick={handleClick}
-          iconBefore="b-reddit"
-          iconBeforeProps={{
-            color: 'primary'
-          }}
-        >
-          <Text color="primary">{text}</Text>
-        </Button>
-      </Tooltip>
-    </>
+    <Tooltip content="Login or register with your Reddit account">
+      <Button
+        width="100%"
+        variant="ghost"
+        onClick={handleClick}
+        iconBefore="b-reddit"
+        iconBeforeProps={{
+          color: 'primary'
+        }}
+      >
+        <Text color="primary">{text}</Text>
+      </Button>
+    </Tooltip>
   );
 };
 

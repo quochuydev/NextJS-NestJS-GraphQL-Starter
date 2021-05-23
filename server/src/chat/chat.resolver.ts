@@ -25,6 +25,9 @@ export class ChatResolver {
   @Subscription(() => Message, {
     name: newMessage,
   })
+  @Subscription(() => Message, {
+    name: 'newMessage2',
+  })
   newMessage(): any {
     return pubsub.asyncIterator(newMessage);
   }

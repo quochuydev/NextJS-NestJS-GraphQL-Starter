@@ -39,13 +39,13 @@ const db = [
 ];
 
 const alreadyRemoved = [];
-let charactersState = db; // This fixes issues with updating characters state forcing it to use the current state and not the state that was active when the card was created.
+let charactersState = db;
 
 function Advanced() {
   const [characters, setCharacters] = useState(db);
   const [lastDirection, setLastDirection] = useState();
 
-  const childRefs = useMemo(
+  const childRefs: any = useMemo(
     () =>
       Array(db.length)
         .fill(0)

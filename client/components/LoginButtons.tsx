@@ -14,10 +14,10 @@ function LoginButtons() {
       <Columns.Column spread={3} spreadOffset="both">
         <Flex flexDirection="column">
           <Heading fontSize="400">{t('page.login.heading')}</Heading>
-          <br />
+          {/* <br />
           <GitHubLogin />
           <br />
-          <RedditLogin />
+          <RedditLogin /> */}
           <br />
           <GoogleLogin />
         </Flex>

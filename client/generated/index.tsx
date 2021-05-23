@@ -88,6 +88,7 @@ export type SocialAuthInput = {
 
 export type Subscription = {
   readonly __typename?: 'Subscription';
+  readonly newMessage2: Message;
   readonly newMessage: Message;
 };
 
@@ -225,6 +226,17 @@ export type NewMessageSubscriptionVariables = Exact<{ [key: string]: never; }>;
 export type NewMessageSubscription = (
   { readonly __typename?: 'Subscription' }
   & { readonly newMessage: (
+    { readonly __typename?: 'Message' }
+    & Pick<Message, 'sent' | 'body'>
+  ) }
+);
+
+export type NewMessage2SubscriptionVariables = Exact<{ [key: string]: never; }>;
+
+
+export type NewMessage2Subscription = (
+  { readonly __typename?: 'Subscription' }
+  & { readonly newMessage2: (
     { readonly __typename?: 'Message' }
     & Pick<Message, 'sent' | 'body'>
   ) }
@@ -569,3 +581,32 @@ export function useNewMessageSubscription(baseOptions?: ApolloReactHooks.Subscri
       }
 export type NewMessageSubscriptionHookResult = ReturnType<typeof useNewMessageSubscription>;
 export type NewMessageSubscriptionResult = ApolloReactCommon.SubscriptionResult<NewMessageSubscription>;
+export const NewMessage2Document = gql`
+    subscription newMessage2 {
+  newMessage2 {
+    sent
+    body
+  }
+}
+    `;
+
+/**
+ * __useNewMessage2Subscription__
+ *
+ * To run a query within a React component, call `useNewMessage2Subscription` and pass it any options that fit your needs.
+ * When your component renders, `useNewMessage2Subscription` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the subscription, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useNewMessage2Subscription({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useNewMessage2Subscription(baseOptions?: ApolloReactHooks.SubscriptionHookOptions<NewMessage2Subscription, NewMessage2SubscriptionVariables>) {
+        return ApolloReactHooks.useSubscription<NewMessage2Subscription, NewMessage2SubscriptionVariables>(NewMessage2Document, baseOptions);
+      }
+export type NewMessage2SubscriptionHookResult = ReturnType<typeof useNewMessage2Subscription>;
+export type NewMessage2SubscriptionResult = ApolloReactCommon.SubscriptionResult<NewMessage2Subscription>;

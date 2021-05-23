@@ -1,6 +1,7 @@
 import NextErrorComponent from 'next/error';
 import * as Sentry from '@sentry/node';
 import withApollo from 'lib/withApollo';
+import { NextPageContext } from 'next';
 
 const Error = ({ statusCode, hasGetInitialPropsRun, err }) => {
   if (!hasGetInitialPropsRun && err) {
@@ -13,11 +14,19 @@ const Error = ({ statusCode, hasGetInitialPropsRun, err }) => {
   return <NextErrorComponent statusCode={statusCode} />;
 };
 
-Error.getInitialProps = async ({ res, err, asPath }) => {
-  const errorInitialProps = await NextErrorComponent.getInitialProps({
+Error.getInitialProps = async ({
+  res,
+  err,
+  asPath
+}: {
+  res: any;
+  err: any;
+  asPath: any;
+}) => {
+  const errorInitialProps: any = await NextErrorComponent.getInitialProps({
     res,
     err
-  });
+  } as NextPageContext);
 
   // Workaround for https://github.com/vercel/next.js/issues/8592, mark when
   // getInitialProps has run
@@ -49,12 +58,15 @@ Error.getInitialProps = async ({ res, err, asPath }) => {
   // If this point is reached, getInitialProps was called without any
   // information about what the error might be. This is unexpected and may
   // indicate a bug introduced in Next.js, so record it in Sentry
-  Sentry.captureException(
-    new Error(`_error.js getInitialProps missing data at path: ${asPath}`)
-  );
+
+  // Sentry.captureException(
+  //   new Error(
+  //     `_error.js getInitialProps missing data at path: ${asPath}`
+  //   ) as any
+  // );
   await Sentry.flush(2000);
 
   return errorInitialProps;
 };
 
-export default withApollo(Error);
+export default withApollo(Error as any);
