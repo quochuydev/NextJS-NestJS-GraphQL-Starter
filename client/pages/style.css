@@ -1,0 +1,11 @@
+.react-calendar {
+  width: 100vw;
+}
+
+.react-calendar__tile {
+  padding: 1.5rem 0.5rem;
+}
+
+.react-calendar__tile--now {
+  background: #0f0;
+}

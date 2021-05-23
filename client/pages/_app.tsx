@@ -4,13 +4,10 @@ import NProgress from 'nprogress';
 import { get } from 'lodash';
 import { Provider as BumbagProvider, ToastManager } from 'bumbag';
 import Router from 'next/router';
-import { getDataFromTree } from '@apollo/client/react/ssr';
 import { GA_ID } from '../constants';
-import initSentry from '../lib/sentry';
-import jwt from 'jsonwebtoken';
 import parseCookie from 'helpers/parseCookie';
 import theme from '../constants/theme';
-import withApollo from '../lib/withApollo';
+import './style.css';
 
 NProgress.configure({ showSpinner: false });
 Router.events.on('routeChangeStart', () => {

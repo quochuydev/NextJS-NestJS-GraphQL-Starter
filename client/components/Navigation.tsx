@@ -62,7 +62,7 @@ function Navigation() {
       <TopNav.Section>
         <Link href="/" passHref>
           <TopNav.Item href="/" fontWeight="semibold">
-            <Image src="/girl.jpg" height="44px" />
+            <Image src="/spiderman1.jpg" height="44px" />
           </TopNav.Item>
         </Link>
       </TopNav.Section>

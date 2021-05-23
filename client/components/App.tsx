@@ -12,6 +12,7 @@ import Login from 'components/Login';
 import Navigation from 'components/Navigation';
 import Footer from 'components/Footer';
 import useTranslation from 'locales/useTranslation';
+import NavBar from 'containers/NavBar';
 
 const pagePadding = 'major-2';
 
@@ -153,13 +154,14 @@ const App = ({
         <link rel="manifest" href="/manifest.json" />
       </Head>
 
-      <PageWithHeader header={<Navigation />} border="default">
-        <RenderBreadcrumbs breadcrumbs={breadcrumbs} asPath={asPath} />
-        <Box use="main" flex="1" padding={pagePadding}>
-          {requiresUser && !me ? <Login /> : children}
-        </Box>
-        {showFooter && <Footer pagePadding={pagePadding} />}
-      </PageWithHeader>
+      {/* <PageWithHeader header={<Navigation />} border="default"> */}
+      <NavBar asPath={asPath} />
+      <RenderBreadcrumbs breadcrumbs={breadcrumbs} asPath={asPath} />
+      <Box use="main" flex="1" padding={pagePadding}>
+        {requiresUser && !me ? <Login /> : children}
+      </Box>
+      {showFooter && <Footer pagePadding={pagePadding} />}
+      {/* </PageWithHeader> */}
     </>
   );
 };

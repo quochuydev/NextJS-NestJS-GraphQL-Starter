@@ -31,7 +31,7 @@
 
 export default {
   global: {
-    siteTitle: 'Acme inc',
+    siteTitle: '3H for kids Inc',
     siteShortName: 'A short name',
     twitterHandle: '@example'
   },

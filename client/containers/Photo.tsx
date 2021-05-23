@@ -18,7 +18,7 @@ const PhotoNameAge = styled.div`
   align-items: center;
   font-size: 1.4rem;
 
-  h2:nth-child(2) {
+  h2:nth-of-type(2) {
     margin-left: 10px;
     font-weight: 500;
   }

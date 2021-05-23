@@ -16,27 +16,6 @@ import Photo from './Photo';
 import styles from './swipe.module.css';
 import Link from 'next/link';
 
-const Navbar = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  padding: 20px 0;
-
-  svg {
-    fill: #dadfe6;
-    font-size: 1.5rem;
-  }
-
-  svg:nth-child(1) {
-    fill: #fe466d;
-  }
-
-  @media (min-width: 1025px) {
-    width: 400px;
-    margin: auto;
-  }
-`;
-
 const PhotoActions = styled.div`
   height: calc(100vh-44px);
   display: flex;
@@ -50,16 +29,16 @@ const Actions = styled.div`
   align-items: center;
   margin: 1rem 0;
 
-  .action:nth-child(1) {
+  .action:nth-of-type(1) {
     color: #fd5068;
   }
 
-  .action:nth-child(2) {
+  .action:nth-of-type(2) {
     margin: 0 1rem;
     color: #2db1ff;
   }
 
-  .action:nth-child(3) {
+  .action:nth-of-type(3) {
     color: #1be4a1;
   }
 `;
@@ -99,7 +78,7 @@ const Photos = styled.div`
 const db = [
   {
     name: 'Richard Hendricks',
-    url: './girl.jpg',
+    url: './spiderman1.jpg',
     age: 22,
     description: `Lorem LoremLorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
       Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
@@ -107,7 +86,7 @@ const db = [
   },
   {
     name: 'Jared Dunn',
-    url: './girl.jpg',
+    url: './spiderman2.jpg',
     age: 22,
     description: `Lorem LoremLorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
       Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
@@ -158,17 +137,6 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar>
-        <Link as="/discovery" href="/discovery" passHref>
-          <AiFillFire />
-        </Link>
-        <Link as="/chat" href="/chat" passHref>
-          <AiFillWechat />
-        </Link>
-        <Link as="/profile" href="/profile" passHref>
-          <FaUserAlt />
-        </Link>
-      </Navbar>
       {/* <Swiped /> */}
       <Photos>
         {characters.map((character, index) => (

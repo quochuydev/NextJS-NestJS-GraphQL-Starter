@@ -74,7 +74,7 @@ function SettingsPage() {
     <App
       title={t('page.profile.title')}
       description={t('page.profile.description')}
-      breadcrumbs={[{ label: t('page.profile.title') }]}
+      // breadcrumbs={[{ label: t('page.profile.title') }]}
       requiresUser
     >
       <Container breakpoint="tablet">

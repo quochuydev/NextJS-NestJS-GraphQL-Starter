@@ -44,7 +44,10 @@ const Home = () => {
   }, []);
 
   return (
-    <App description="">{me ? `Welcome ${me.name}` : <LoggedOutHome />}</App>
+    <App description="" showFooter={false}>
+      {/* {me ? `Welcome ${me.name}` : <LoggedOutHome />} */}
+      <Swipe />
+    </App>
   );
 };
 
